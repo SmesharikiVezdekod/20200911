@@ -6,7 +6,6 @@
 
 
     <LinearLayout
-
         android:id="@+id/fragment_donation_type___button___create_target_donation"
         style="@style/AppTheme.RoundedCornerMaterialButton"
         android:layout_width="match_parent"
