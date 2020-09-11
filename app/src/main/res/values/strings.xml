@@ -3,4 +3,7 @@
 
     <string name="donation_type_target">1</string>
     <string name="donation_type_regular">2</string>
+
+    <string name="main_placeholder_text">You have no fees yet.\nBegin a good one.</string>
+    <string name="main_placeholder_button">Create fee</string>
 </resources>
