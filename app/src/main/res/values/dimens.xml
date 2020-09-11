@@ -3,4 +3,7 @@
     <dimen name="vk_button_horizontal_padding">16dp</dimen>
     <dimen name="vk_button_vertical_padding">8dp</dimen>
     <dimen name="vk_button_corner_radius">8dp</dimen>
+    <dimen name="button_cornedRadius">8dp</dimen>
+    <dimen name="progressBar_cornerRadius">16dp</dimen>
+    <dimen name="vk_button_outline_border">1dp</dimen>
 </resources>

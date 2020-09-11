@@ -1,13 +1,15 @@
 <resources>
-    <string name="app_name">donations</string>
+    <string name="app_name" translatable="false">donations</string>
 
-    <string name="snippet_header">Добряши помогают котикам</string>
-    <string name="snippet_name">Имя Фамилия </string>
-    <string name="snippet_ending">Осталось n дней</string>
-    <string name="snippet_delimiter">• </string>
+    <string name="snippet_header" translatable="false">Добряши помогают котикам</string>
+    <string name="snippet_name">Name Surname</string>
+    <string name="snippet_ending" >5 days left</string>
+    <string name="snippet_delimiter" translatable="false">•</string>
+    <string name="snippet_help">Donate</string>
+    <string name="snippet_collected">Collected 8 750 ₽ from 10 000 ₽</string>
 
-    <string name="donation_type_target">1</string>
-    <string name="donation_type_regular">2</string>
+    <string name="donation_type_target" translatable="false">1</string>
+    <string name="donation_type_regular" translatable="false">2</string>
 
     <string name="main_placeholder_text">You have no fees yet.\nBegin a good one.</string>
     <string name="main_placeholder_button">Create fee</string>
