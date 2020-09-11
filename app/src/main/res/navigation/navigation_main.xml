@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_main"
+    app:startDestination="@+id/nav_main">
+
+    <fragment
+        android:id="@+id/nav_main"
+        android:name="ru.nikshlykov.donations.ui.fragments.MainFragment"
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_nav_main_to_nav_donation_type"
+            app:destination="@id/nav_donation_type" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_donation_type"
+        android:name="ru.nikshlykov.donations.ui.fragments.DonationTypeFragment"
+        tools:layout="@layout/fragment_donation_type">
+        <action
+            android:id="@+id/action_nav_donation_type_to_nav_regular_donation_flow"
+            app:destination="@id/nav_donation_data" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_donation_data"
+        android:name="ru.nikshlykov.donations.ui.fragments.DonationDataFragment"
+        tools:layout="@layout/fragment_donation_data">
+        <action
+            android:id="@+id/action_nav_donation_data_to_nav_donation_option_data"
+            app:destination="@id/nav_donation_option_data" />
+        <action
+            android:id="@+id/action_nav_donation_data_to_nav_donation_preview"
+            app:destination="@id/nav_donation_preview" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_donation_option_data"
+        android:name="ru.nikshlykov.donations.ui.fragments.DonationOptionDataFragment"
+        tools:layout="@layout/fragment_donation_option_data">
+        <action
+            android:id="@+id/action_nav_donation_option_data_to_nav_donation_preview"
+            app:destination="@id/nav_donation_preview" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_donation_preview"
+        android:name="ru.nikshlykov.donations.ui.fragments.DonationPreviewFragment"
+        tools:layout="@layout/fragment_donation_preview">
+        <action
+            android:id="@+id/action_nav_donation_preview_to_nav_donation_in_news"
+            app:destination="@id/nav_donation_in_news" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_donation_in_news"
+        android:name="ru.nikshlykov.donations.ui.fragments.DonationInNewsFragment"
+        tools:layout="@layout/fragment_donation_in_news">
+        <action
+            android:id="@+id/action_nav_donation_in_news_to_nav_donation_page"
+            app:destination="@id/nav_donation_page" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_donation_page"
+        android:name="ru.nikshlykov.donations.ui.fragments.DonationPageFragment"
+        tools:layout="@layout/fragment_donation_page" />
+</navigation>
