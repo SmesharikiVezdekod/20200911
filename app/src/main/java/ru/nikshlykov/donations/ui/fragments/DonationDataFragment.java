@@ -46,7 +46,7 @@ public class DonationDataFragment extends Fragment {
 
         NavDirections navDirections = null;
 
-        Button nextOrCreateDonationButton = view.findViewById(R.id.fragment_donation_data___button___next);
+        Button nextOrCreateDonationButton = view.findViewById(R.id.fragment_donation_data___button___next_or_create_donation);
         //TODO Прописать текст на кнопке через ресурсы.
 
         if (donationType.equals(getString(R.string.donation_type_target))) {

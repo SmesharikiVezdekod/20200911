@@ -1,23 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="16dp">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/fragment_donation___linear_layout___donation_name_container"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Основные данные"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginBottom="16dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Название сбора"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Название сбора"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/fragment_donation___linear_layout___donation_sum_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_below="@+id/fragment_donation___linear_layout___donation_name_container"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Сумма, Р"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Сколько нужно собрать"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/fragment_donation___linear_layout___donation_aim_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:orientation="vertical"
+        android:layout_below="@+id/fragment_donation___linear_layout___donation_sum_container">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Цель"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Например, лечение человека"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/fragment_donation___linear_layout___donation_description_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:orientation="vertical"
+        android:layout_below="@+id/fragment_donation___linear_layout___donation_aim_container">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Описание"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="На что пойдут деньги и как они кому-то помогут?" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/fragment_donation___linear_layout___card_for_donation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:orientation="vertical"
+        android:layout_below="@id/fragment_donation___linear_layout___donation_description_container">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Куда получать деньги"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint=""/>
+    </LinearLayout>
 
     <Button
-        android:id="@+id/fragment_donation_data___button___next"
-        android:layout_width="wrap_content"
+        android:id="@+id/fragment_donation_data___button___next_or_create_donation"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         android:text="Далее/Создать сбор" />
-
-</LinearLayout>
+</RelativeLayout>
