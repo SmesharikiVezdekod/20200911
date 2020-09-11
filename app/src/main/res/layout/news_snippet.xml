@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/news_snippet"
+    style="@style/VkCard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentTop="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/snippet_picture_height"
+            android:scaleType="centerCrop"
+            android:src="@drawable/cat_snippet" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/snippet_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/image"
+            android:layout_marginTop="@dimen/cardView_margin_top_bottom"
+            android:layout_marginBottom="@dimen/cardView_margin_top_bottom"
+            android:layout_marginStart="@dimen/cardView_margin_start_end"
+            android:layout_marginEnd="@dimen/cardView_margin_start_end">
+
+            <TextView
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="2dp"
+                android:text="@string/snippet_header"
+                android:textColor="@color/black"
+                android:textSize="@dimen/snippet_header_textSize"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/padding_name_to_delimiter"
+                android:text="@string/snippet_name"
+                android:textSize="@dimen/snippet_text_textSize"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/header" />
+
+            <TextView
+                android:id="@+id/text_delimiter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_text_delimiter"
+                android:text="@string/snippet_delimiter"
+                android:textSize="@dimen/snippet_text_textSize"
+                app:layout_constraintStart_toEndOf="@id/name"
+                app:layout_constraintTop_toTopOf="@id/name" />
+
+            <TextView
+                android:id="@+id/time_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_text_delimiter"
+                android:text="@string/snippet_ending"
+                android:textSize="@dimen/snippet_text_textSize"
+                app:layout_constraintStart_toEndOf="@id/text_delimiter"
+                app:layout_constraintTop_toTopOf="@id/name" />
+
+            <View
+                android:id="@+id/separator"
+                android:layout_width="0dp"
+                android:layout_height="0.5dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/separator"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/name" />
+
+            <TextView
+                android:id="@+id/donated"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_delimiter_to_collected"
+                android:text="@string/snippet_collected"
+                android:textColor="@color/black"
+                android:textSize="@dimen/snippet_collected_textSize"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/separator" />
+
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                style="@style/VkProgressBar"
+                android:layout_width="270dp"
+                android:layout_height="4dp"
+                android:layout_marginTop="32dp"
+                android:progress="87"
+                android:progressDrawable="@drawable/progress_bar_colors"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/donate_button" />
+
+            <Button
+                android:id="@+id/donate_button"
+                style="@style/VkButtonOutlined"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="@dimen/padding_delimiter_to_collected"
+                android:text="@string/snippet_help"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/progress_bar"
+                app:layout_constraintTop_toBottomOf="@+id/separator" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>
