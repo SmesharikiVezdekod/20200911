@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimary">#6200E0</color>
     <color name="colorPrimaryDark">#3700B3</color>
+
+    <color name="colorButtonNormal">#F5F5F5</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorAuthor">#6D7885</color>
+    <color name="colorUnderAuthor">#818C99</color>
+    <color name="colorOfNumberOfViews">#99A2AD</color>
+    <color name="colorGreen">#4BB34B</color>
+    <color name="colorGreenTransparent">#B8C1CC</color>
+
     <color name="colorAccent">#4986CC</color>
 
     <color name="lightBlue">#3F8AE0</color>
@@ -12,4 +22,5 @@
     <color name="black">#000000</color>
     <!--  used for text color in snippet  -->
     <color name="grey">#818C99</color>
+
 </resources>
