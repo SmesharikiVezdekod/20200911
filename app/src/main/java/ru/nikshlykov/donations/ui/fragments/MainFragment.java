@@ -1,4 +1,4 @@
-package ru.nikshlykov.donations.ui.main;
+package ru.nikshlykov.donations.ui.fragments;
 
 import androidx.lifecycle.ViewModelProviders;
 import android.os.Bundle;
@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import ru.nikshlykov.donations.R;
+import ru.nikshlykov.donations.viewmodels.MainViewModel;
 
 public class MainFragment extends Fragment {
 

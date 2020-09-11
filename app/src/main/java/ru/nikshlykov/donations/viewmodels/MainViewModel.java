@@ -1,4 +1,4 @@
-package ru.nikshlykov.donations.ui.main;
+package ru.nikshlykov.donations.viewmodels;
 
 import androidx.lifecycle.ViewModel;
 

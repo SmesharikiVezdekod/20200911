@@ -1,8 +1,10 @@
-package ru.nikshlykov.donations;
+package ru.nikshlykov.donations.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import ru.nikshlykov.donations.ui.main.MainFragment;
+
+import ru.nikshlykov.donations.R;
+import ru.nikshlykov.donations.ui.fragments.MainFragment;
 
 public class MainActivity extends AppCompatActivity {
 
