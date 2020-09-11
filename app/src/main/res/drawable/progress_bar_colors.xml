@@ -3,7 +3,7 @@
 
     <item android:id="@android:id/background">
         <shape>
-            <corners android:radius="@dimen/progressBar_cornerRadius"/>
+            <corners android:radius="@dimen/vk_progress_bar_corner_radius"/>
             <gradient
                 android:startColor="@color/lightBlueTransparent"
                 android:endColor="@color/lightBlueTransparent"
@@ -15,7 +15,7 @@
     <item android:id="@android:id/progress">
         <clip>
             <shape>
-                <corners android:radius="@dimen/progressBar_cornerRadius"/>
+                <corners android:radius="@dimen/vk_progress_bar_corner_radius"/>
                 <gradient
                     android:startColor="@color/lightBlue"
                     android:endColor="@color/lightBlue"

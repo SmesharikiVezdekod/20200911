@@ -50,5 +50,9 @@
         <item name="cornerRadius">10dp</item>
 
     </style>
+
+    <style name="VkCard" parent="CardView">
+        <item name="cardCornerRadius">@dimen/vk_card_corner_radius</item>
+    </style>
     
 </resources>
