@@ -13,4 +13,6 @@
     <dimen name="cardView_margin_start_end">12dp</dimen>
     <dimen name="padding_name_to_delimiter">7dp</dimen>
     <dimen name="padding_delimiter_to_collected">12dp</dimen>
+    <dimen name="margin_text_delimiter">4dp</dimen>
+    <dimen name="snippet_picture_height">140dp</dimen>
 </resources>
