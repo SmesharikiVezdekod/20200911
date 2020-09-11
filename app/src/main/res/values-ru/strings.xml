@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="main_placeholder_text">У вас пока нет сборов.\nНачните доброе дело</string>
+    <string name="main_placeholder_button">Создать сбор</string>
+</resources>
