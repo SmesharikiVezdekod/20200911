@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">donations</string>
+    <string name="snippet_header">Добряши помогают котикам</string>
+    <string name="snippet_name">Имя Фамилия </string>
+    <string name="snippet_ending">Осталось n дней</string>
+    <string name="snippet_delimiter">• </string>
 </resources>
