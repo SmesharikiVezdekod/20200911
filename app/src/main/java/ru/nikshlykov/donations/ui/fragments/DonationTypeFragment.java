@@ -36,14 +36,16 @@ public class DonationTypeFragment extends Fragment {
         view.findViewById(R.id.fragment_donation_type___button___create_target_donation).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                NavDirections navDirections = DonationTypeFragmentDirections.actionNavDonationTypeToNavRegularDonationFlow();
+                NavDirections navDirections = DonationTypeFragmentDirections.actionNavDonationTypeToNavRegularDonationFlow()
+                        .setDonationType(getString(R.string.donation_type_target));
                 onFragmentInteractionListener.onFragmentInteraction(navDirections);
             }
         });
         view.findViewById(R.id.fragment_donation_type___button___create_regular_donation).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                NavDirections navDirections = DonationTypeFragmentDirections.actionNavDonationTypeToNavRegularDonationFlow();
+                NavDirections navDirections = DonationTypeFragmentDirections.actionNavDonationTypeToNavRegularDonationFlow()
+                        .setDonationType(getString(R.string.donation_type_regular));
                 onFragmentInteractionListener.onFragmentInteraction(navDirections);
             }
         });

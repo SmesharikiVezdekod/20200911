@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -18,10 +19,19 @@ public class DonationDataFragment extends Fragment {
 
     private OnFragmentInteractionListener onFragmentInteractionListener;
 
+    private String donationType;
+
     @Override
     public void onAttach(@NonNull Context context) {
         super.onAttach(context);
         onFragmentInteractionListener = (OnFragmentInteractionListener) context;
+    }
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        DonationDataFragmentArgs fragmentArgs = DonationDataFragmentArgs.fromBundle(getArguments());
+        donationType = fragmentArgs.getDonationType();
     }
 
     @Nullable
@@ -33,11 +43,24 @@ public class DonationDataFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        view.findViewById(R.id.fragment_donation_data___button___next).setOnClickListener(new View.OnClickListener() {
+
+        NavDirections navDirections = null;
+
+        Button nextOrCreateDonationButton = view.findViewById(R.id.fragment_donation_data___button___next);
+        //TODO Прописать текст на кнопке через ресурсы.
+
+        if (donationType.equals(getString(R.string.donation_type_target))) {
+            navDirections = DonationDataFragmentDirections.actionNavDonationDataToNavDonationOptionData();
+        } else if (donationType.equals(getString(R.string.donation_type_regular))) {
+            navDirections = DonationDataFragmentDirections.actionNavDonationDataToNavDonationPreview();
+        }
+        final NavDirections finalNavDirections = navDirections;
+        nextOrCreateDonationButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                NavDirections navDirections = DonationDataFragmentDirections.actionNavDonationDataToNavDonationOptionData();
-                onFragmentInteractionListener.onFragmentInteraction(navDirections);
+                if (finalNavDirections != null) {
+                    onFragmentInteractionListener.onFragmentInteraction(finalNavDirections);
+                }
             }
         });
     }

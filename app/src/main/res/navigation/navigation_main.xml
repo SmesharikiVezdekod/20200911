@@ -33,6 +33,10 @@
         <action
             android:id="@+id/action_nav_donation_data_to_nav_donation_preview"
             app:destination="@id/nav_donation_preview" />
+        <argument
+            android:name="donationType"
+            app:argType="string"
+            android:defaultValue="1" />
     </fragment>
 
     <fragment

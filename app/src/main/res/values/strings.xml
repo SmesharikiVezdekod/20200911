@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">donations</string>
+
+    <string name="donation_type_target">1</string>
+    <string name="donation_type_regular">2</string>
 </resources>
