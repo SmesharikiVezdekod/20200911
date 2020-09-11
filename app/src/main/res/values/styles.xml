@@ -20,4 +20,9 @@
         <item name="android:layout_height">1dp</item> // You can change thickness here.
 
     </style>
+    <style name="WideProgressBar" parent="Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="android:color">@color/colorGreen</item>
+        <item name="cornerRadius">6dp</item>
+
+    </style>
 </resources>
