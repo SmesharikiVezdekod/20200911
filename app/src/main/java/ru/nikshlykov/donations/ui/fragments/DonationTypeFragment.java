@@ -49,5 +49,10 @@ public class DonationTypeFragment extends Fragment {
                 onFragmentInteractionListener.onFragmentInteraction(navDirections);
             }
         });
+        
+        showButton();
+    }
+
+    private void showButton() {
     }
 }
