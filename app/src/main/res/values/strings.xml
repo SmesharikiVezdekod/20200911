@@ -50,4 +50,5 @@
     <string name="donation_sum_edit_text_hint" translatable="false">Сколько нужно собрать</string>
     <string name="donation_name_edit_text_hint" translatable="false">Название сбора</string>
     <string name="upload_a_cover" translatable="false">Загрузить обложку</string>
+    <string name="snippet_preview_collected">Be first to help</string>
 </resources>
