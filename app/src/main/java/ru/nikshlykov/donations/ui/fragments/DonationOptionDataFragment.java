@@ -5,6 +5,9 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CompoundButton;
+import android.widget.LinearLayout;
+import android.widget.RadioButton;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -40,5 +43,21 @@ public class DonationOptionDataFragment extends Fragment {
                 onFragmentInteractionListener.onFragmentInteraction(navDirections);
             }
         });
+
+        final ViewGroup datePickerContainer = view.findViewById(R.id.date_container);
+
+        RadioButton fullSumRadioButton = view.findViewById(R.id.deadline_full_sum_radio);
+        fullSumRadioButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    datePickerContainer.setVisibility(View.GONE);
+                } else {
+                    datePickerContainer.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+        fullSumRadioButton.setChecked(true);
     }
 }

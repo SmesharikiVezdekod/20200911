@@ -50,4 +50,10 @@
     <string name="donation_sum_edit_text_hint" translatable="false">Сколько нужно собрать</string>
     <string name="donation_name_edit_text_hint" translatable="false">Название сбора</string>
     <string name="upload_a_cover" translatable="false">Загрузить обложку</string>
+
+    <string name="fee_deadline">Deadline</string>
+    <string name="fee_deadline_full_sum_option">Until full sum</string>
+    <string name="fee_deadline_certain_date_option">At certain date</string>
+    <string name="fee_deadline_date">Date</string>
+    <string name="fee_deadline_date_hint">Select date</string>
 </resources>
