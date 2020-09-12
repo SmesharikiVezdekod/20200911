@@ -12,9 +12,10 @@
     <string name="fee_deadline_certain_date_option">В определённую дату</string>
     <string name="fee_deadline_date">Дата окончания</string>
     <string name="fee_deadline_date_hint">Выберите дату</string>
-
+    <string name="snippet_preview_collected">Будь первым!</string>
     <string name="comment">Комментарий</string>
     <string name="send">Отправил</string>
     <string name="time">5 мин</string>
     <string name="name">Алексей Мазелюк</string>
+    <string name="zagluska">NextFragment</string>
 </resources>
