@@ -45,6 +45,7 @@
                 android:text="@string/donation_name_text_view_hint" />
 
             <EditText
+                android:id="@+id/fee_title_edit_text"
                 style="@style/VkEditText"
                 android:hint="@string/donation_name_edit_text_hint" />
         </LinearLayout>
@@ -58,6 +59,7 @@
                 android:text="@string/donation_sum_text_view_hint" />
 
             <EditText
+                android:id="@+id/fee_sum_edit_text"
                 style="@style/VkEditText"
                 android:hint="@string/donation_sum_edit_text_hint"
                 android:inputType="number" />
@@ -72,6 +74,7 @@
                 android:text="@string/donation_aim_text_view_hint" />
 
             <EditText
+                android:id="@+id/fee_aim_edit_text"
                 style="@style/VkEditText"
                 android:hint="@string/donation_aim_edit_text_hint" />
         </LinearLayout>
@@ -85,6 +88,7 @@
                 android:text="@string/donation_description_text_view_hint" />
 
             <EditText
+                android:id="@+id/fee_description_edit_text"
                 style="@style/VkEditText"
                 android:hint="@string/donation_description_edit_text_hint" />
         </LinearLayout>
@@ -98,6 +102,7 @@
                 android:text="@string/card_for_donation_text_view_hint" />
 
             <EditText
+                android:id="@+id/fee_account_edit_text"
                 style="@style/VkEditText"
                 android:text="Счёт VK Pay 1234" />
         </LinearLayout>
@@ -112,6 +117,7 @@
                 android:text="@string/author" />
 
             <EditText
+                android:id="@+id/fee_author_edit_text"
                 style="@style/VkEditText"
                 android:text="Матвей Правосудов" />
         </LinearLayout>
