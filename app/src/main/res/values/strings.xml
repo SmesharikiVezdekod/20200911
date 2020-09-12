@@ -50,6 +50,9 @@
     <string name="donation_name_edit_text_hint" translatable="false">Название сбора</string>
     <string name="upload_a_cover" translatable="false">Загрузить обложку</string>
 
+    <string name="snippet_preview_collected">Be first to help</string>
+
+
     <string name="fee_deadline">Deadline</string>
     <string name="fee_deadline_full_sum_option">Until full sum</string>
     <string name="fee_deadline_certain_date_option">At certain date</string>
@@ -59,4 +62,5 @@
     <string name="send">Send</string>
     <string name="time">5 min</string>
     <string name="name">Alex Mazeluk</string>
+
 </resources>
