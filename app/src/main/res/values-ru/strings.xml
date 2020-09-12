@@ -4,7 +4,7 @@
     <string name="main_placeholder_button">Создать сбор</string>
 
     <string name="snippet_name">Имя Фамилия </string>
-    <string name="snippet_ending" >Закончится через 5 дней</string>
+    <string name="snippet_ending">Закончится через 5 дней</string>
     <string name="snippet_help">Помочь</string>
     <string name="snippet_collected">Собрано 8 750 ₽ из 10 000 ₽</string>
     <string name="fee_deadline">Сбор завершится</string>
@@ -13,5 +13,8 @@
     <string name="fee_deadline_date">Дата окончания</string>
     <string name="fee_deadline_date_hint">Выберите дату</string>
 
-
+    <string name="comment">Комментарий</string>
+    <string name="send">Отправил</string>
+    <string name="time">5 мин</string>
+    <string name="name">Алексей Мазелюк</string>
 </resources>
