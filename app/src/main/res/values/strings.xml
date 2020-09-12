@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name" translatable="false">donations</string>
 
-    <string name="donation_type_target" translatable="false">1</string>
-    <string name="donation_type_regular" translatable="false">2</string>
+    <string name="donation_type_target" translatable="false">DonationTypeTarget</string>
+    <string name="donation_type_regular" translatable="false">DonationTypeRegular</string>
     <string name="full_text" translatable="false">Привет-привет, добряш!\n\n
 
 Я создал это событие, чтобы показать какие у меня прекрасные добряши и буду счастлив, если получится вдохновить кого-нибудь хотя бы на маленький перевод в пользу фонда Юна.
@@ -36,4 +36,18 @@
 
     <string name="main_placeholder_text">You have no fees yet.\nBegin a good one.</string>
     <string name="main_placeholder_button">Create fee</string>
+
+    <string name="further" translatable="false">Далее</string>
+    <string name="author" translatable="false">Автор</string>
+    <string name="create_donation" translatable="false">Создать сбор</string>
+    <string name="card_for_donation_text_view_hint" translatable="false">Куда получать деньги</string>
+    <string name="donation_description_text_view_hint" translatable="false">Описание</string>
+    <string name="donation_aim_text_view_hint" translatable="false">Цель</string>
+    <string name="donation_sum_text_view_hint" translatable="false">Сумма, ₽</string>
+    <string name="donation_name_text_view_hint" translatable="false">Название сбора</string>
+    <string name="donation_description_edit_text_hint" translatable="false">На что пойдут деньги и как они кому-то помогут?</string>
+    <string name="donation_aim_edit_text_hint" translatable="false">Например, лечение человека</string>
+    <string name="donation_sum_edit_text_hint" translatable="false">Сколько нужно собрать</string>
+    <string name="donation_name_edit_text_hint" translatable="false">Название сбора</string>
+    <string name="upload_a_cover" translatable="false">Загрузить обложку</string>
 </resources>

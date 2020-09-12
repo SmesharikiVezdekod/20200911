@@ -47,12 +47,13 @@ public class DonationDataFragment extends Fragment {
         NavDirections navDirections = null;
 
         Button nextOrCreateDonationButton = view.findViewById(R.id.fragment_donation_data___button___next_or_create_donation);
-        //TODO Прописать текст на кнопке через ресурсы.
 
         if (donationType.equals(getString(R.string.donation_type_target))) {
             navDirections = DonationDataFragmentDirections.actionNavDonationDataToNavDonationOptionData();
         } else if (donationType.equals(getString(R.string.donation_type_regular))) {
             navDirections = DonationDataFragmentDirections.actionNavDonationDataToNavDonationPreview();
+            nextOrCreateDonationButton.setText(getString(R.string.create_donation));
+            view.findViewById(R.id.fragment_donation___linear_layout___author).setVisibility(View.VISIBLE);
         }
         final NavDirections finalNavDirections = navDirections;
         nextOrCreateDonationButton.setOnClickListener(new View.OnClickListener() {

@@ -31,7 +31,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="24dp"
                     android:gravity="center"
-                    android:text="Загрузить обложку"
+                    android:text="@string/upload_a_cover"
                     android:textColor="@color/lightBlue" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -42,11 +42,11 @@
 
             <TextView
                 style="@style/VkFormHintTextView"
-                android:text="Название сбора" />
+                android:text="@string/donation_name_text_view_hint" />
 
             <EditText
                 style="@style/VkEditText"
-                android:hint="Название сбора" />
+                android:hint="@string/donation_name_edit_text_hint" />
         </LinearLayout>
 
         <LinearLayout
@@ -55,11 +55,11 @@
 
             <TextView
                 style="@style/VkFormHintTextView"
-                android:text="Сумма, ₽" />
+                android:text="@string/donation_sum_text_view_hint" />
 
             <EditText
                 style="@style/VkEditText"
-                android:hint="Сколько нужно собрать"
+                android:hint="@string/donation_sum_edit_text_hint"
                 android:inputType="number" />
         </LinearLayout>
 
@@ -69,11 +69,11 @@
 
             <TextView
                 style="@style/VkFormHintTextView"
-                android:text="Цель" />
+                android:text="@string/donation_aim_text_view_hint" />
 
             <EditText
                 style="@style/VkEditText"
-                android:hint="Например, лечение человека" />
+                android:hint="@string/donation_aim_edit_text_hint" />
         </LinearLayout>
 
         <LinearLayout
@@ -82,11 +82,11 @@
 
             <TextView
                 style="@style/VkFormHintTextView"
-                android:text="Описание" />
+                android:text="@string/donation_description_text_view_hint" />
 
             <EditText
                 style="@style/VkEditText"
-                android:hint="На что пойдут деньги и как они кому-то помогут?" />
+                android:hint="@string/donation_description_edit_text_hint" />
         </LinearLayout>
 
         <LinearLayout
@@ -95,7 +95,7 @@
 
             <TextView
                 style="@style/VkFormHintTextView"
-                android:text="Куда получать деньги" />
+                android:text="@string/card_for_donation_text_view_hint" />
 
             <EditText
                 style="@style/VkEditText"
@@ -109,7 +109,7 @@
 
             <TextView
                 style="@style/VkFormHintTextView"
-                android:text="Автор" />
+                android:text="@string/author" />
 
             <EditText
                 style="@style/VkEditText"
@@ -121,6 +121,6 @@
             style="@style/VkButtonFilled"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Далее/Создать сбор" />
+            android:text="@string/further" />
     </LinearLayout>
 </ScrollView>
