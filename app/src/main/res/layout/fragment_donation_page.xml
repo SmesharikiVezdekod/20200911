@@ -142,6 +142,7 @@
             app:layout_constraintTop_toBottomOf="@+id/view2" />
 
         <View
+            android:id="@+id/view3"
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_marginStart="12dp"
@@ -246,13 +247,161 @@
         </LinearLayout>
 
         <View
+            android:id="@+id/separator_above_comment"
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:layout_marginStart="32dp"
             android:layout_marginBottom="12dp"
             android:background="@android:color/darker_gray"
             app:layout_constraintStart_toStartOf="@+id/textView4"
             app:layout_constraintTop_toBottomOf="@+id/post_footer" />
 
+        <LinearLayout
+
+            android:id="@+id/sender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="@+id/textView4"
+            app:layout_constraintTop_toBottomOf="@+id/separator_above_comment">
+
+            <ImageView
+                android:id="@+id/icon"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="12dp"
+                android:contentDescription="@string/todo"
+                android:src="@drawable/avatar2" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/mainText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="@string/name"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginTop="12dp"
+                        android:text="@string/time"
+                        android:textColor="@color/vkEditTextHint"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginBottom="12dp"
+                        android:text="@string/send"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="13sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/commentLay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            app:layout_constraintTop_toBottomOf="@+id/sender">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:contentDescription="@string/todo"
+                android:src="@drawable/avatar" />
+
+            <EditText
+                style="@style/VkFormCommentEditText"
+                android:autofillHints="@string/todo"
+                android:drawableEnd="@drawable/smile"
+                android:hint="@string/comment"
+                android:inputType="text"
+                android:textSize="17sp"
+                tools:layout_editor_absoluteX="25dp" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/separator"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="12dp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintStart_toStartOf="@+id/textView4"
+            app:layout_constraintTop_toBottomOf="@+id/commentLay" />
+
+        <FrameLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="50dp"
+            app:layout_constraintStart_toStartOf="@+id/textView4"
+            app:layout_constraintTop_toBottomOf="@+id/separator">
+
+            <TextView
+                android:id="@+id/donated"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_delimiter_to_collected"
+                android:layout_marginBottom="8dp"
+                android:text="@string/snippet_collected"
+                android:textColor="@color/black"
+                android:textSize="@dimen/snippet_collected_textSize"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ProgressBar
+                android:id="@+id/small_progress_bar"
+                style="@style/VkGreenProgressBar"
+
+                android:layout_width="230dp"
+                android:layout_height="4dp"
+                android:layout_marginTop="32dp"
+                android:progress="87"
+                android:progressDrawable="@drawable/progress_bar_green"
+                app:layout_constraintBottom_toBottomOf="@id/donate_button"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </FrameLayout>
+
+        <Button
+            android:id="@+id/donate_button"
+            style="@style/VkButtonOutlinedGreen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="40dp"
+            android:text="@string/snippet_help"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/frameLayout" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
