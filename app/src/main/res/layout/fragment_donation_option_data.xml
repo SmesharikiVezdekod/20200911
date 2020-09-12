@@ -1,23 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Дополнительно"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        android:padding="@dimen/page_content_padding">
+
+        <LinearLayout
+            android:id="@+id/author_container"
+            style="@style/VkFormLinearLayout">
+
+            <TextView
+                style="@style/VkFormHintTextView"
+                android:text="@string/author" />
+
+            <EditText
+                style="@style/VkEditText"
+                android:hint="@string/author" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/deadline_container"
+            style="@style/VkFormLinearLayout">
+
+            <TextView
+                style="@style/VkFormHintTextView"
+                android:text="@string/fee_deadline" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/deadline_full_sum_radio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fee_deadline_full_sum_option"
+                    />
+
+                <RadioButton
+                    android:id="@+id/deadline_certain_date_radio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fee_deadline_certain_date_option"
+                    />
+
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/date_container"
+            style="@style/VkFormLinearLayout">
+
+            <TextView
+                style="@style/VkFormHintTextView"
+                android:text="@string/fee_deadline_date" />
+
+            <EditText
+                style="@style/VkEditText"
+                android:hint="@string/fee_deadline_date_hint" />
+        </LinearLayout>
+
+    </LinearLayout>
 
     <Button
         android:id="@+id/fragment_donation_option_data___button___next"
-        android:layout_width="wrap_content"
+        android:layout_margin="@dimen/page_content_padding"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Создать сбор" />
-
-</LinearLayout>
+        android:text="@string/create_donation"
+        android:layout_alignParentBottom="true"
+        style="@style/VkButtonFilled"
+        />
+</RelativeLayout>
