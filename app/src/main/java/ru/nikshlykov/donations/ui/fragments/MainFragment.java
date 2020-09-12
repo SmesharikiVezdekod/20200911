@@ -1,5 +1,7 @@
 package ru.nikshlykov.donations.ui.fragments;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelProviders;
 
 import android.content.Context;
@@ -15,6 +17,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import ru.nikshlykov.donations.R;
+import ru.nikshlykov.donations.model.DonationData;
 import ru.nikshlykov.donations.ui.OnFragmentInteractionListener;
 import ru.nikshlykov.donations.viewmodels.MainViewModel;
 
@@ -38,11 +41,12 @@ public class MainFragment extends Fragment {
     }
 
     @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+    public void onViewCreated(@NonNull View view, @Nullable final Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         view.findViewById(R.id.fragment_main___button___create_donation).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                mViewModel.data = new DonationData();
                 NavDirections navDirections = MainFragmentDirections.actionNavMainToNavDonationType();
                 onFragmentInteractionListener.onFragmentInteraction(navDirections);
             }
@@ -52,7 +56,7 @@ public class MainFragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        mViewModel = ViewModelProviders.of(this).get(MainViewModel.class);
+        mViewModel =  new ViewModelProvider((AppCompatActivity) requireActivity()).get(MainViewModel.class);
     }
 
 }
