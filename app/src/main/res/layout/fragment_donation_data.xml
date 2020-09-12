@@ -1,171 +1,126 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp">
+    android:layout_height="match_parent">
 
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/fragment_donation___frame_layout___add_image_container"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_marginBottom="16dp"
-        app:strokeColor="@color/colorPrimary"
-        app:strokeWidth="1dp">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/fragment_donation___frame_layout___add_image_container"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/ic_picture" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:gravity="center"
+                    android:text="Загрузить обложку"
+                    android:textColor="@color/lightBlue" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:layout_marginEnd="8dp"
-                android:src="@drawable/ic_picture" />
+            android:id="@+id/fragment_donation___linear_layout___donation_name_container"
+            style="@style/VkFormLinearLayout">
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="24dp"
-                android:gravity="center"
-                android:text="Загрузить обложку"
-                android:textColor="@color/colorPrimary" />
-        </LinearLayout>
-    </com.google.android.material.card.MaterialCardView>
-
-    <LinearLayout
-        android:id="@+id/fragment_donation___linear_layout___donation_name_container"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/fragment_donation___frame_layout___add_image_container"
-        android:layout_marginBottom="16dp"
-        android:orientation="vertical">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Название сбора" />
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/darker_gray">
+                style="@style/VkFormHintTextView"
+                android:text="Название сбора" />
 
             <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                style="@style/VkEditText"
                 android:hint="Название сбора" />
-        </FrameLayout>
+        </LinearLayout>
 
-    </LinearLayout>
+        <LinearLayout
+            android:id="@+id/fragment_donation___linear_layout___donation_sum_container"
+            style="@style/VkFormLinearLayout">
 
-    <LinearLayout
-        android:id="@+id/fragment_donation___linear_layout___donation_sum_container"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/fragment_donation___linear_layout___donation_name_container"
-        android:layout_marginBottom="16dp"
-        android:orientation="vertical">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Сумма, Р" />
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/darker_gray">
+            <TextView
+                style="@style/VkFormHintTextView"
+                android:text="Сумма, ₽" />
 
             <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                style="@style/VkEditText"
                 android:hint="Сколько нужно собрать"
                 android:inputType="number" />
-        </FrameLayout>
-    </LinearLayout>
+        </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/fragment_donation___linear_layout___donation_aim_container"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/fragment_donation___linear_layout___donation_sum_container"
-        android:layout_marginBottom="16dp"
-        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/fragment_donation___linear_layout___donation_aim_container"
+            style="@style/VkFormLinearLayout">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Цель" />
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/darker_gray">
+            <TextView
+                style="@style/VkFormHintTextView"
+                android:text="Цель" />
 
             <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                style="@style/VkEditText"
                 android:hint="Например, лечение человека" />
-        </FrameLayout>
-    </LinearLayout>
+        </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/fragment_donation___linear_layout___donation_description_container"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/fragment_donation___linear_layout___donation_aim_container"
-        android:layout_marginBottom="16dp"
-        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/fragment_donation___linear_layout___donation_description_container"
+            style="@style/VkFormLinearLayout">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Описание" />
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/darker_gray">
+            <TextView
+                style="@style/VkFormHintTextView"
+                android:text="Описание" />
 
             <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                style="@style/VkEditText"
                 android:hint="На что пойдут деньги и как они кому-то помогут?" />
-        </FrameLayout>
-    </LinearLayout>
+        </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/fragment_donation___linear_layout___card_for_donation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/fragment_donation___linear_layout___donation_description_container"
-        android:layout_marginBottom="16dp"
-        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/fragment_donation___linear_layout___card_for_donation"
+            style="@style/VkFormLinearLayout">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Куда получать деньги" />
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/darker_gray">
+            <TextView
+                style="@style/VkFormHintTextView"
+                android:text="Куда получать деньги" />
 
             <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-        </FrameLayout>
+                style="@style/VkEditText"
+                android:text="Счёт VK Pay 1234" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/fragment_donation___linear_layout___author"
+            style="@style/VkFormLinearLayout"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/VkFormHintTextView"
+                android:text="Автор" />
+
+            <EditText
+                style="@style/VkEditText"
+                android:text="Матвей Правосудов" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/fragment_donation_data___button___next_or_create_donation"
+            style="@style/VkButtonFilled"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Далее/Создать сбор" />
     </LinearLayout>
-
-    <Button
-        android:id="@+id/fragment_donation_data___button___next_or_create_donation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-
-        android:text="Далее/Создать сбор" />
-</RelativeLayout>
+</ScrollView>

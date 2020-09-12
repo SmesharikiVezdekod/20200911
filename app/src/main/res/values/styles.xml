@@ -74,4 +74,25 @@
         <item name="cardCornerRadius">@dimen/vk_card_corner_radius</item>
     </style>
 
+    <style name="VkEditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/vk_edit_text_background</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:textColorHint">@color/vkEditTextHint</item>
+    </style>
+
+    <style name="VkFormHintTextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">8dp</item>
+    </style>
+
+    <style name="VkFormLinearLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">16dp</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
 </resources>
